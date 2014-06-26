@@ -1,4 +1,7 @@
 class RestaurantsController < ApplicationController
+
+  before_filter :ensure_logged_in, :only => [:show, :index]
+
   def new
     @restaurant = Restaurant.new
   end
@@ -7,7 +10,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
 
       if @restaurant.save
-          redirect_to restaurant_path
+          redirect_to restaurants_path
       else
         render :new
       end
