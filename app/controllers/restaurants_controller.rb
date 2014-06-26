@@ -24,21 +24,21 @@ class RestaurantsController < ApplicationController
   end
 
   def destroy
-    @restaurant = Resturant.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
     redirect_to restaurants_path
   end
 
   def edit
-    @restaurant = Resturant.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def show
-    @product = Product.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def index
-    @products = Product.all
+    @restaurants = Restaurant.all
   end
 
 
