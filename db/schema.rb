@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20140626190612) do
     t.integer  "restaurant_id"
     t.integer  "user_id"
     t.integer  "party_size"
-    t.integer  "party_time"
+    t.datetime "party_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
