@@ -3,5 +3,5 @@ class Restaurant < ActiveRecord::Base
   validates :max_occupancy, :numericality => {:only_integer => true}
 
   CUISINE_TYPES = ["Mexican","French","Japanese", "American","Korean", "Italian"]
-
+  has_many :reservations
 end
